@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob: mediastream:; font-src 'self'; connect-src 'self'; frame-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#f3f5fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<title>DevTools</title>
+<meta name="description" content="Tools for sysadmins and developers. Everything runs locally in your browser.">
+<link rel="stylesheet" href="css/app.css">
+<script src="js/theme.js"></script>
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button class="iconbtn menu" id="menuBtn" type="button" aria-label="Browse all tools" title="Browse all tools" aria-expanded="false" aria-controls="side"></button>
+  <a class="brand" href="#" aria-label="DevTools home">
+    <span class="brand-t">DevTools</span>
+  </a>
+  <nav class="top-crumbs" id="topCrumbs" aria-label="Breadcrumb"></nav>
+  <button class="find" id="findBtn" type="button" aria-haspopup="dialog" aria-controls="palette">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11a7.5 7.5 0 1 0 15 0a7.5 7.5 0 1 0-15 0"/><path d="M21 21l-4.6-4.6"/></svg>
+    <span class="find-t">Search tools…</span>
+    <span class="find-k" aria-hidden="true"><kbd class="kbd-mod">Ctrl</kbd><kbd>K</kbd></span>
+  </button>
+  <button class="iconbtn" id="themeBtn" type="button" aria-label="Toggle theme"></button>
+</header>
+<aside id="side" class="side" aria-label="Navigation"></aside>
+<div class="scrim" id="scrim" hidden></div>
+<main id="main" tabindex="-1"></main>
+<dialog id="palette" class="palette" aria-label="Search tools">
+  <div class="pal-in">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11a7.5 7.5 0 1 0 15 0a7.5 7.5 0 1 0-15 0"/><path d="M21 21l-4.6-4.6"/></svg>
+    <input id="q" type="search" placeholder="Search tools…" autocomplete="off" spellcheck="false" aria-label="Search tools"
+      role="combobox" aria-expanded="true" aria-controls="qres" aria-autocomplete="list">
+    <kbd>Esc</kbd>
+  </div>
+  <ul id="qres" class="qres" role="listbox" aria-label="Search results"></ul>
+  <p id="qstatus" class="sr-only" role="status"></p>
+</dialog>
+<dialog id="keys" class="sheet" aria-labelledby="keysT">
+  <div class="sheet-h">
+    <h2 id="keysT">Keyboard shortcuts</h2>
+    <button class="iconbtn ghost" id="keysX" type="button" aria-label="Close" title="Close"></button>
+  </div>
+  <dl class="keys">
+    <div><dt><kbd class="kbd-mod">Ctrl</kbd><kbd>K</kbd></dt><dd>Search tools, from anywhere</dd></div>
+    <div><dt><kbd>/</kbd></dt><dd>Search tools, when not typing</dd></div>
+    <div><dt><kbd>↑</kbd><kbd>↓</kbd></dt><dd>Move through search results</dd></div>
+    <div><dt><kbd>↵</kbd></dt><dd>Open the selected tool</dd></div>
+    <div><dt><kbd>Esc</kbd></dt><dd>Close search, the menu or a dialog</dd></div>
+  </dl>
+</dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:2rem">This site needs JavaScript. Everything runs locally in your browser.</p></noscript>
+</body>
+</html>
