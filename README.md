@@ -123,3 +123,8 @@ Reload the page without the cache: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</
 - **Private:** the tools do all their work in your browser. There is no database, and nothing is sent to a server.
 - **Lightweight:** the container is a small web server with the website files built into its image.
 - **Secure defaults:** the web server sends security headers. The settings are in the `deploy/` folder.
+
+## License
+
+Project code is licensed under the ISC License; see [LICENSE](./LICENSE).
+Third-party assets may have separate license terms.
